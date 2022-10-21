@@ -1,188 +1,129 @@
-:root{
-    --16t7ys: 21cm;
-    --t2n7ys: 29.7cm;
-    --margin_left: 1cm;
-    --margin_right: 1cm;
-    --margin_top: 1cm;
-    --margin_bottom: 1cm;
-    --lebar_kop: calc(var(--16t7ys) - var(--margin_left) - var(--margin_right));
-    --tinggi_kop: 2.68cm;
-    --tinggi_are_ngetik: calc(var(--t2n7ys) - var(--margin_top) - var(--margin_bottom) - var(--tinggi_kop));
-    --tinggi_logo: 2.08;
-}
 body{
-    background: linear-gradient(#ccc,#bbb);
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: 'Calibri';
+	 background-color: lightgrey;
 }
-* {
-    box-sizing: border-box;
+
+*{
+	box-sizing: border-box;
 }
-body:hover {
-    display: block;
-    margin: 8px;
-}
-.kertas_a4{
+
+.A4{
     width: 100%;
-    max-width: var(--16t7ys);
-    min-height: var(--t2n7ys);
-    border: solid 1px #ccc;
-    background: white;
+    height: 5000px;
+    border: 1px solid #ccc;
+    max-width: 21cm;
+    max-height: 29cm;
     margin: auto;
-    padding: var(--margin_top) var(--margin_right) var(--margin_bottom) var(--margin_left);
+    padding: 1cm 1cm 1cm 1cm;
+    background-color: white
+
 }
-div{
-    display: block;
+
+.kop{
+	display: grid;
+	grid-template-columns: 11cm 8cm;
+	height: 2cm;
+	width: 20cm;
+	align: center;
 }
-.blok_kop_surat{
-    width: var(--lebar_kop);
-    height: var(--tinggi_kop);
-    display: grid;
-    grid-template-columns: 11cm 8cm;
-    box-sizing: border-box;
+
+.kiriatas{
+	display: grid;
+	grid-template-columns: 2cm auto;
 }
-.logo_and_judul{
-    display: grid;
-    grid-template-columns: 2cm auto;
-    text-align: center;
-    height: var(--tinggi_logo);
-    box-sizing: border-box;
+
+.logoikmi{
+	height: 2cm;
+    width: 1.8cm;
+    margin-top: 5px;
 }
-.logo{
-    text-align: center;
-    display: block;
-    box-sizing: border-box;
-}
-.logo_ikmi{
-    width: 2cm;
-    margin-top: -2px;
-}
-img{
-    background-image: yellow;
-    border-radius: 2px;
-}
-.sekolah_ikmi{
-    text-align: center;
+
+.univ{
     font-size: 11px;
-    font-weight: bold;
     letter-spacing: .2px;
+    font-weight: bold;
+    text-align: center;
     padding-right: 7px;
     padding-top: 5px;
 }
-.sekolah_ikmi *{
-    box-sizing: border-box;
+
+.univikmi{
+    font-weight: bold;
+    font-size: 10px;
 }
-.sekolah_ikmi div{
-    display: block;
-}
-.stmik_ikmi{
+
+.namauniv{
     display: grid;
     grid-template-columns: 5.5cm auto;
-    box-sizing: border-box;
+    display: pinkz;
+    margin-top: 8px;
 }
-.stmik{
-    color: red;
-    font-size: 55px;
+
+.stimik{
+    font-size: 52px;
     font-weight: bold;
-    margin-top: -10px;
+    color: green;
+    margin-top: -8px;
+    letter-spacing: 5px;
+    padding-left: 1px;
+}
+
+.nama{
+    color: darkred;
+    font-size: 32px;
     letter-spacing: 10px;
-    padding-left: 15px;
-    text-align: left;
+    margin-top: -2.5px;
 }
-.stmik *{
-    box-sizing: border-box;
-}
-.stmik div{
-    display: block;
-}
-.ikmi_dan_cirebon{
-    padding-left: 4px;
-    text-align: right;
-    font-weight: bold;
-    margin-top: -58px;
-}
-.ikmi_dan_cirebon *{
-    box-sizing: border-box;
-}
-.ikmi_dan_cirebon div{
-    display: block;
-}
-.ikmi{
-    color: blue;
-    font-size: 29px;
-    padding-left: 4px;
-    font-weight: bold;
-    letter-spacing: 12px;
-}
-.ikmi *{
-    box-sizing: border-box;
-}
-.ikmi div{
-    display: block;
-}
+
 .cirebon{
     color: green;
-    font-size: 15px;
-    letter-spacing: 7px;
+    letter-spacing: 5.5px;
+    font-size: 16px;
+    margin-top: -7px;
+}
+
+.nama, .cirebon{
+    padding-left: 10px;
+    text-align: left;
     font-weight: bold;
-    padding-left: 4px;
-    margin-top: -5px;
+    padding-left: 20px;
 }
-.cirebon *{
-    box-sizing: border-box;
-}
-.cirebon div{
-    display: block;    
-}
-.alamat{
-    padding: 1px;
+
+.kananatas{
+    padding-top: 5px;
     padding-left: 20px;
     font-size: 11px;
     letter-spacing: 1px;
-    height: var(--tinggi_logo);
+    font-weight: bold;
+
 }
-.sk{
+
+.sampul{
+    background-color: darkred;
     text-align: center;
     color: white;
-    background: brown;
-    height: calc(var(--tinggi_kop) - var(--tinggi_logo));
-    padding-top: 1.5px;
-    box-sizing: border-box;
 }
+
 .terakreditasi{
+    background-color: green;
     text-align: center;
     color: white;
-    background: green;
-    height: calc(var(--tinggi_kop) - var(--tinggi_logo));
-    padding-top: 1.5px;
-    box-sizing: border-box;
 }
-.area_ngetik {
-    width: var(--lebar_kop);
-    height: var(--tinggi_area_ngetik);
-    background: purplez;
+
+.tulis{
+    width: 19cm;
+    height: 24cm;
+    margin-top: 40px;
 }
-.judul_surat {
+
+.tulis{
     text-align: center;
-    margin: 15px 0 0 0;
     font-size: 16pt;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     text-decoration: underline;
 }
-h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-.nomor_surat {
+
+.nomorsurat{
     text-align: center;
     font-size: 10pt;
-    margin-top: -3px;
-    font-family: consolas;
+    margin-top: 5px;
 }
